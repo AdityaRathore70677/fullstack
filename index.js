@@ -1,11 +1,16 @@
-import React from "react";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
 
-class Resume_Header extends React.Component {
-  render() {
-    return (
-      <h1>Resume Details</h1>
-    );
-  }
-}
+import Resume_Header from './ResumeCreate/Resume_Header';
+import Resume_Person_Info from './ResumeCreate/Resume_Person_Info';
+import Education from './ResumeCreate/Education'; // ✅ Fixed filename to match common naming convention
 
-export default Resume_Header;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <Resume_Header />
+    <Resume_Person_Info />
+    <Education />
+  </React.StrictMode>
+);
